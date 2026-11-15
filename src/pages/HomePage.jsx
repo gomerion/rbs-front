@@ -1,4 +1,5 @@
 import { useAuth } from '../auth/context'
+import ResourceListPage from './ResourceListPage'
 
 export default function HomePage() {
   const { user, logout } = useAuth()
@@ -18,10 +19,7 @@ export default function HomePage() {
       </header>
 
       <main className="app__main">
-        <h1 className="app__title">Главная страница</h1>
-        <p className="app__hint">
-          Здесь появятся ресурсы, свободные интервалы и свои брони.
-        </p>
+        <ResourceListPage />
       </main>
     </div>
   )
